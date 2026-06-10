@@ -114,9 +114,9 @@ input{
         <h2>Caça-Níqueis</h2>
 
         <div class="reels">
-            <div class="reel" id="r1">🍒</div>
-            <div class="reel" id="r2">🍋</div>
-            <div class="reel" id="r3">⭐</div>
+            <div class="reel" id="r1">🧌</div>
+            <div class="reel" id="r2">👹</div>
+            <div class="reel" id="r3">👨‍🔧</div>
         </div>
 
         <button onclick="spin()">Girar (50 fichas)</button>
@@ -145,7 +145,7 @@ function updateBalance(){
     document.getElementById("balance").textContent = balance;
 }
 
-const symbols = ["🍒","🍋","⭐","💎","7️⃣"];
+const symbols = ["🧌","👹","👨🏻‍🔧","💎","7️⃣"];
 
 function spin(){
 
@@ -172,10 +172,10 @@ function spin(){
     }
     else if(a === b || b === c || a === c){
         balance += 100;
-        result.innerHTML = "✨ Combinação! +100 fichas";
+        result.innerHTML = "✨ Combinação! +200 fichas";
     }
     else{
-        result.innerHTML = "😢 Tente novamente";
+        result.innerHTML = "😢 Tente novamente buteco";
     }
 
     updateBalance();
