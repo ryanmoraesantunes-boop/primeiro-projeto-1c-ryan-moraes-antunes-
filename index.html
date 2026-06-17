@@ -1,220 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cassino do ryan</title>
-
+<title>Site</title>
 <style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:linear-gradient(135deg,#0a3d1a,#111);
-    color:white;
-    text-align:center;
-}
-
 header{
-    background:#000;
-    padding:20px;
-    border-bottom:3px solid gold;
+background-color: #0873e6;
+color: #FFFFFF;
+text-align: center;
+max-width: 800px;
+margin: 0 auto;
+padding: 16px;
+border: 5px solid rgb(0, 0, 0);
 }
-
-h1{
-    color:gold;
+main{
+background-color: #FFFFFF;
+color: #0562c5;
+max-width: 800px;
+margin: 0 auto;
+padding: 16px;
+display: flex;
 }
-
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:20px;
+img{
+width: 80px;
+height: 80px;
 }
-
-.balance{
-    font-size:24px;
-    margin:20px 0;
-    color:gold;
-}
-
-.slot-machine{
-    background:#222;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 0 15px gold;
-}
-
-.reels{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    margin:20px 0;
-}
-
-.reel{
-    width:100px;
-    height:100px;
-    background:white;
-    color:black;
-    font-size:60px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:10px;
-}
-
-button{
-    background:gold;
-    border:none;
-    padding:12px 25px;
-    border-radius:8px;
-    font-size:18px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-button:hover{
-    background:#ffd700;
-}
-
-.result{
-    margin-top:20px;
-    font-size:22px;
-}
-
-.roulette{
-    margin-top:40px;
-    background:#222;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 0 15px red;
-}
-
-input{
-    padding:10px;
-    border-radius:5px;
-    border:none;
-    width:100px;
-    text-align:center;
+.Artigo-Autor {
+font-weight: bold;
 }
 </style>
 </head>
 <body>
-
 <header>
-    <h1>🎰 Cassino do ryan🎰</h1>
+<h1>Meu blog</h1>
+<p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
 </header>
-
-<div class="container">
-
-    <div class="balance">
-        Fichas: <span id="balance">1000</span>
-    </div>
-
-    <div class="slot-machine">
-        <h2>Caça-Níqueis</h2>
-
-        <div class="reels">
-            <div class="reel" id="r1">🧌</div>
-            <div class="reel" id="r2">👹</div>
-            <div class="reel" id="r3">👨‍🔧</div>
-        </div>
-
-        <button onclick="spin()">Girar (50 fichas)</button>
-
-        <div class="result" id="slotResult"></div>
-    </div>
-
-    <div class="roulette">
-        <h2>Roleta Simples</h2>
-
-        <p>Escolha um número de 1 a 10</p>
-
-        <input type="number" id="guess" min="1" max="10">
-
-        <button onclick="playRoulette()">Apostar (100 fichas)</button>
-
-        <div class="result" id="rouletteResult"></div>
-    </div>
-
+<main>
+<img src="ImgTec.png" alt="Logotipo">
+<div>
+<h2>Meu Primeiro Post</h2>
+<p class="Artigo-Autor">Por: ryan</p>
+<p>Boas-Vindas Ao Meu Novo Blog!</p>
+<button>❤️ <span>0</span></button>
 </div>
-
-<script>
-let balance = 1000;
-
-function updateBalance(){
-    document.getElementById("balance").textContent = balance;
-}
-
-const symbols = ["🧌","👹","👨🏻‍🔧","💎","7️⃣"];
-
-function spin(){
-
-    if(balance < 50){
-        alert("Fichas insuficientes!");
-        return;
-    }
-
-    balance -= 50;
-
-    let a = symbols[Math.floor(Math.random()*symbols.length)];
-    let b = symbols[Math.floor(Math.random()*symbols.length)];
-    let c = symbols[Math.floor(Math.random()*symbols.length)];
-
-    document.getElementById("r1").textContent = a;
-    document.getElementById("r2").textContent = b;
-    document.getElementById("r3").textContent = c;
-
-    let result = document.getElementById("slotResult");
-
-    if(a === b && b === c){
-        balance += 500;
-        result.innerHTML = "🎉 JACKPOT! +500 fichas";
-    }
-    else if(a === b || b === c || a === c){
-        balance += 100;
-        result.innerHTML = "✨ Combinação! +200 fichas";
-    }
-    else{
-        result.innerHTML = "😢 Tente novamente buteco";
-    }
-
-    updateBalance();
-}
-
-function playRoulette(){
-
-    if(balance < 100){
-        alert("Fichas insuficientes!");
-        return;
-    }
-
-    let guess = parseInt(document.getElementById("guess").value);
-
-    if(isNaN(guess) || guess < 1 || guess > 10){
-        alert("Digite um número de 1 a 10");
-        return;
-    }
-
-    balance -= 100;
-
-    let lucky = Math.floor(Math.random()*10)+1;
-
-    let result = document.getElementById("rouletteResult");
-
-    if(guess === lucky){
-        balance += 1000;
-        result.innerHTML =
-        `🎉 Acertou! Número sorteado: ${lucky}<br>+1000 fichas`;
-    }else{
-        result.innerHTML =
-        `❌ Número sorteado: ${lucky}`;
-    }
-
-    updateBalance();
-}
-
-updateBalance();
-</script>
-
+</main>
 </body>
+<script>
+const botao = document.querySelector("button");
+botao.addEventListener("click", botaoClicado);
+
+function botaoClicado(){
+console.log("Botao Clicado");
+let texto = botao.querySelector("span");
+texto.textContent++;
+}
+</script>
 </html>
