@@ -3,92 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo das Lutas</title>
+    <title>Meu Blog de Lutas</title>
 
     <style>
-        body{
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-        }
-
-        header{
-            background-color: #ad1212;
+        header {
+            background-color: #d98bec;
             color: #FFFFFF;
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
             padding: 16px;
+            border: 5px solid #eca9e9;
         }
 
-        main{
+        main {
             background-color: #FFFFFF;
-            color: #72097D;
+            color: #130f14;
             max-width: 800px;
             margin: 0 auto;
             padding: 16px;
         }
 
-        img{
-            width: 120px;
-            height: 120px;
+        article {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
         }
 
-        .artigo-autor{
+        img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .artigo-autor {
             font-weight: bold;
         }
 
-        article{
-            margin-bottom: 30px;
+        button {
+            cursor: pointer;
+            margin-right: 8px;
+            font-size: 16px;
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Mundo das Lutas</h1>
-        <p>
-            No Mundo das Lutas você conhece diferentes artes marciais,
-            aprende curiosidades, técnicas, regras e acompanha a história
-            dos principais esportes de combate.
-        </p>
-    </header>
+<header>
+    <h1>Meu Blog de Lutas</h1>
+    <p>
+        Bem-vindo ao Meu Blog de Lutas! Aqui você encontra informações sobre
+        artes marciais, técnicas, campeões e os benefícios dos esportes de combate.
+    </p>
+</header>
 
-    <main>
+<main>
 
-        <article>
-            <h2>meu primeiro post</h2>
+    <article>
+        <img src="https://via.placeholder.com/80" alt="Boxe">
 
-            <img src="jiujitsu.jpg" alt="Lutadores de Jiu-Jitsu">
-
+        <div>
+            <h2>Boxe</h2>
             <p>
-                O Jiu-Jitsu Brasileiro é uma arte marcial focada em técnicas
-                de alavanca, imobilizações e finalizações, permitindo que um
-                atleta menor possa vencer um adversário mais forte.
+                O boxe é um esporte de combate que desenvolve força,
+                velocidade, resistência e disciplina.
             </p>
 
-            <p class="artigo-autor">
-                Autor: ryan
-            </p>
-        </article>
+            <p class="artigo-autor">Autor: Ryan</p>
 
-        <article>
-            <h2>Meu segundo post</h2>
+            <button>👍 Curtir</button>
+            <button>💬 Comentar</button>
+        </div>
+    </article>
 
-            <img src="muaythai.jpg" alt="Lutador de Muay Thai">
+    <article>
+        <img src="https://via.placeholder.com/80" alt="Jiu-Jitsu">
 
+        <div>
+            <h2>Jiu-Jitsu</h2>
             <p>
-                O Muay Thai é conhecido como a arte das oito armas, utilizando
-                socos, chutes, joelhos e cotovelos para atacar e se defender.
+                O Jiu-Jitsu Brasileiro utiliza técnicas de alavancas,
+                imobilizações e finalizações para superar o adversário.
             </p>
 
-            <p class="artigo-autor">
-                Autor: ryan 
-            </p>
-        </article>
+            <p class="artigo-autor">Autor: Ryan</p>
 
-    </main>
+            <button>👍 Curtir</button>
+            <button>💬 Comentar</button>
+        </div>
+    </article>
+
+    <article>
+        <img src="https://via.placeholder.com/80" alt="Muay Thai">
+
+        <div>
+            <h2>Muay Thai</h2>
+            <p>
+                O Muay Thai é conhecido como a arte das oito armas,
+                utilizando socos, chutes, joelhos e cotovelos.
+            </p>
+
+            <p class="artigo-autor">Autor: Ryan</p>
+
+            <button>👍 Curtir</button>
+            <button>💬 Comentar</button>
+        </div>
+    </article>
+
+</main>
 
 </body>
 </html>
