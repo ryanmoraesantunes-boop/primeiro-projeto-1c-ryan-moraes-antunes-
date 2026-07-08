@@ -1,28 +1,94 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site</title>
-<link rel="stylesheet" href="style.css">
+    <title>Mundo das Lutas</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        header{
+            background-color: #ad1212;
+            color: #FFFFFF;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        main{
+            background-color: #FFFFFF;
+            color: #72097D;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        img{
+            width: 120px;
+            height: 120px;
+        }
+
+        .artigo-autor{
+            font-weight: bold;
+        }
+
+        article{
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 
 <body>
+
     <header>
-        <h1>Meu blog</h1>
-        <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
+        <h1>Mundo das Lutas</h1>
+        <p>
+            No Mundo das Lutas você conhece diferentes artes marciais,
+            aprende curiosidades, técnicas, regras e acompanha a história
+            dos principais esportes de combate.
+        </p>
     </header>
+
     <main>
-        <img src="ImgTec.png" alt="Logotipo">
-        <div>
-            <h2>Meu Primeiro Post</h2>
-            <p class="Artigo-Autor">Por: ryan</p>
-            <p>Boas-Vindas Ao Meu Novo Blog!</p>
-            <button>❤️ <span>0</span></button>
-            <button> 👍 <span>0</span></button>
-        </div>
+
+        <article>
+            <h2>Jiu-Jitsu Brasileiro</h2>
+
+            <img src="jiujitsu.jpg" alt="Lutadores de Jiu-Jitsu">
+
+            <p>
+                O Jiu-Jitsu Brasileiro é uma arte marcial focada em técnicas
+                de alavanca, imobilizações e finalizações, permitindo que um
+                atleta menor possa vencer um adversário mais forte.
+            </p>
+
+            <p class="artigo-autor">
+                Autor: ryan
+            </p>
+        </article>
+
+        <article>
+            <h2>Muay Thai</h2>
+
+            <img src="muaythai.jpg" alt="Lutador de Muay Thai">
+
+            <p>
+                O Muay Thai é conhecido como a arte das oito armas, utilizando
+                socos, chutes, joelhos e cotovelos para atacar e se defender.
+            </p>
+
+            <p class="artigo-autor">
+                Autor: ryan 
+            </p>
+        </article>
+
     </main>
-<script src="script.js"></script></body>
+
+</body>
 </html>
